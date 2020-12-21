@@ -1,8 +1,9 @@
 {
   "name": "@szydlovski/alea",
-  "version": "0.1.0",
-  "description": "seedable random, an implementation of Johannes Baagøe's Alea PRNG",
+  "version": "0.1.1",
+  "description": "seedable random, an implementation of Johannes Baagøe's Alea",
   "main": "src/alea.js",
+  "repository": "https://github.com/szydlovski/alea",
   "scripts": {
     "test": "mocha test/index.test.js"
   },
