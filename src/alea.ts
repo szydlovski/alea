@@ -1,12 +1,14 @@
-class Alea {
-	#state;
-	constructor(seed = Date.now()) {
+type AleaState = [number, number, number, number];
+
+export default class Alea {
+	#state: AleaState;
+	constructor(seed: any = Date.now()) {
 		this.#state = initializeState(seed);
 	}
-	exportState() {
+	exportState(): AleaState {
 		return [...this.#state];
 	}
-	importState(state) {
+	importState(state: AleaState): Alea {
 		this.#state = state;
 		return this;
 	}
@@ -23,7 +25,7 @@ class Alea {
 	}
 }
 
-function initializeState(seeds) {
+function initializeState(seeds: any): AleaState {
 	if (!Array.isArray(seeds)) {
 		seeds = [seeds];
 	}
@@ -49,7 +51,7 @@ function initializeState(seeds) {
 	return [s0, s1, s2, c];
 }
 
-function advanceState(state) {
+function advanceState(state: AleaState): [number, AleaState] {
 	let [s0, s1, s2, c] = state;
 	const t = 2091639 * s0 + c * 2.3283064365386963e-10;
 	s0 = s1;
@@ -60,7 +62,7 @@ function advanceState(state) {
 
 function createMasher() {
 	let n = 0xefc8249d;
-	return function (data = ' ') {
+	return function (data: any = ' ') {
 		data = data.toString();
 		for (let i = 0; i < data.length; i++) {
 			n += data.charCodeAt(i);
@@ -75,5 +77,3 @@ function createMasher() {
 		return (n >>> 0) * 2.3283064365386963e-10;
 	};
 }
-
-module.exports = Alea;

@@ -14,7 +14,7 @@
     "prng",
     "alea"
   ],
-  "author": "Kamil Szydlowski",
+  "author": "Kamil Szydlowski <kamil.szydlovski@gmail.com> (http://szydlovski.com)",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0",
