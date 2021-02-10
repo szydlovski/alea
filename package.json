@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "seedable random, an implementation of Johannes Baagøe's Alea",
   "main": "dist/alea.js",
+  "types": "dist/alea.d.ts",
   "repository": "https://github.com/szydlovski/alea",
   "scripts": {
     "test": "mocha test/index.test.js",
