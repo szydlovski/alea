@@ -1,6 +1,6 @@
 {
   "name": "@szydlovski/alea",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "seedable random, an implementation of Johannes Baagøe's Alea",
   "main": "src/alea.js",
   "repository": "https://github.com/szydlovski/alea",
