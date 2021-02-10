@@ -1,6 +1,8 @@
-const { expect } = require('chai');
+import chai from 'chai';
+const { expect } = chai;
 
-const Alea = require('../src/alea.js');
+
+import Alea from '../dist/alea.js';
 
 describe('Alea', function () {
 	it('generates random numbers based on a seed', function () {
